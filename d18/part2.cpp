@@ -12,12 +12,12 @@ int main(){
         ll len;
         string color;
         ss >> dir >> len >> color;
-        // color.pop_back();
-        // dir = "RDLU"[color.back() - '0'];
-        // color.pop_back();
-        // color = color.substr(2);
-        // ss = stringstream(color);
-        // ss >> hex >> len;
+        color.pop_back();
+        dir = "RDLU"[color.back() - '0'];
+        color.pop_back();
+        color = color.substr(2);
+        ss = stringstream(color);
+        ss >> hex >> len;
         plan.emplace_back(dir, len);
     }
     ll y = 0, ans = 1;
